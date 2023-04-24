@@ -1,5 +1,8 @@
+<!-- Formatting Stuff -->
+<link rel="stylesheet" type="text/css" href="colors.css">
+
 <!-- Title -->
-<div style='background-color: green'>
+<div class='green-background'>
 <head>
     <h1 align='center'><b><u><i>
         Templates - README
