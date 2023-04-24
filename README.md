@@ -1,12 +1,10 @@
-<!-- Formatting Stuff -->
-<link rel="stylesheet" type="text/css" href="colors.css">
-
 <!-- Title -->
+<div style='background-color: green'>
 <head>
     <h1 align='center'><b><u><i>
-        <div style='background-color: green'>Templates - README</div>
+        Templates - README
     </i></u></b></h1>
-</head>
+</head></div>
 
 
 
