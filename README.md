@@ -2,12 +2,11 @@
 <link rel="stylesheet" type="text/css" href="colors.css">
 
 <!-- Title -->
-<div class='green-background'>
 <head>
     <h1 align='center'><b><u><i>
-        Templates - README
+        <div style='background-color: green'>Templates - README</div>
     </i></u></b></h1>
-</head></div>
+</head>
 
 
 
@@ -17,7 +16,8 @@
 <div style='background-color: orange'>
 <head>
     <h3 align='center'><b><i>
-        <a id='tableofcontents'></a>Table of Contents:
+        <a id='tableofcontents'></a>
+        Table of Contents:
     </i></b></h3>
 </head></div>
 <h5>
