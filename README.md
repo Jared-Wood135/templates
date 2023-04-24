@@ -18,13 +18,13 @@
     </i></b></h3>
 </head></div>
 <h5>
-<li><a href='#description'>Project Description</a></li>
-<li><a href='#goals'>Project Goals</a></li>
-<li><a href='#hypo'>Hypothesis/Questions</a></li>
-<li><a href='#datadict'>Data Dictionary</a></li>
-<li><a href='#planning'>Planning</a></li>
-<li><a href='#instructions'>Instruction To Replicate</a></li>
-<li><a href='#takeaways'>Takeaways</a></li>
+<li><a href='#description'>Project Description</a href></li>
+<li><a href='#goals'>Project Goals</a href></li>
+<li><a href='#hypo'>Hypothesis/Questions</a href></li>
+<li><a href='#datadict'>Data Dictionary</a href></li>
+<li><a href='#planning'>Planning</a href></li>
+<li><a href='#instructions'>Instruction To Replicate</a href></li>
+<li><a href='#takeaways'>Takeaways</a href></li>
 </h5>
 <br><br><br>
 
