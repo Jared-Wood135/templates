@@ -5,13 +5,15 @@
 '''
 1. Orientation
 2. Imports
-3. acquire_superstore
-4. prepare_superstore
-5. wrangle_superstore
+3. acquire
+4. prepare
+5. wrangle
 6. split
 7. scale
 8. sample_dataframe
 9. remove_outliers
+10. drop_nullpct
+11. check_nulls
 '''
 
 # =======================================================================================================
@@ -23,8 +25,6 @@
 '''
 The purpose of this file is to create functions for both the acquire & preparation phase of the data
 science pipeline or also known as 'wrangling' the data...
-
-Wrangling process is specific to the 'superstore_db' from the codeup sql server...
 '''
 
 # =======================================================================================================
@@ -37,54 +37,57 @@ import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
 import os
-import env
 
 # =======================================================================================================
 # Imports END
-# Imports TO acquire_superstore
-# acquire_superstore START
+# Imports TO acquire
+# acquire START
 # =======================================================================================================
 
-def acquire_superstore():
+def acquire():
     '''
-    Obtains the vanilla version of the superstore dataframe
+    Obtains the vanilla version of the mass_shooters dataframe
 
     INPUT:
     NONE
 
     OUTPUT:
-    superstore = pandas dataframe
+    mass_shooters = pandas dataframe
     '''
-    print('template')
+    print('Acquire dat shit!')
 
 # =======================================================================================================
-# acquire_superstore END
-# acquire_superstore TO prepare_superstore
-# prepare_superstore START
+# acquire END
+# acquire TO prepare
+# prepare START
 # =======================================================================================================
 
-def prepare_superstore():
+def prepare():
     '''
-    Takes in the vanilla superstore dataframes and returns a cleaned version that is ready 
+    Takes in the vanilla mass_shooters dataframe and returns a cleaned version that is ready 
     for exploration and further analysis
 
     INPUT:
     NONE
 
     OUTPUT:
-    new_superstore = pandas dataframe of the prepared superstore dataframe
+    .csv = ONLY IF FILE NONEXISTANT
+    prepped_mass_shooters = pandas dataframe of the prepared mass_shooters dataframe
     '''
-    print('Template')
+    if os.path.exists('mass_shooters.csv'):
+        print('Prep dat shit!')
+    else:
+        print('Prep dat shit!')
 
 # =======================================================================================================
-# prepare_superstore END
-# prepare_superstore TO wrangle_superstore
-# wrangle_superstore START
+# prepare END
+# prepare TO wrangle
+# wrangle START
 # =======================================================================================================
 
-def wrangle_superstore():
+def wrangle():
     '''
-    Function that acquires, prepares, and splits the superstore dataframe for use as well as 
+    Function that acquires, prepares, and splits the mass_shooters dataframe for use as well as 
     creating a csv.
 
     INPUT:
@@ -92,33 +95,41 @@ def wrangle_superstore():
 
     OUTPUT:
     .csv = ONLY IF FILE NONEXISTANT
-    train = pandas dataframe of training set for superstore data
-    validate = pandas dataframe of validation set for superstore data
-    test = pandas dataframe of testing set for superstore data
+    train = pandas dataframe of training set for mass_shooter data
+    validate = pandas dataframe of validation set for mass_shooter data
+    test = pandas dataframe of testing set for mass_shooter data
     '''
-    if os.path.exists('superstore.csv'):
-        superstore = pd.read_csv('superstore.csv', index_col=0)
-        train, validate, test = split(superstore)
+    if os.path.exists('mass_shooters.csv'):
+        mass_shooters = pd.read_csv('mass_shooters.csv', index_col=0)
+        train, validate, test = split(mass_shooters, stratify='shooter_volatility')
         return train, validate, test
     else:
-        superstore = prepare_superstore()
-        superstore.to_csv('superstore.csv')
-        train, validate, test = split(superstore)
+        mass_shooters = prepare()
+        mass_shooters.to_csv('mass_shooters.csv')
+        train, validate, test = split(mass_shooters, stratify='shooter_volatility')
         return train, validate, test
     
 # =======================================================================================================
-# wrangle_superstore END
-# wrangle_superstore TO split
+# wrangle END
+# wrangle TO split
 # split START
 # =======================================================================================================
 
-def split(df):
+def split(df, stratify=None):
     '''
     Takes a dataframe and splits the data into a train, validate and test datasets
+
+    INPUT:
+    df = pandas dataframe to be split into
+    stratify = Splits data with specific columns in consideration
+
+    OUTPUT:
+    train = pandas dataframe with 70% of original dataframe
+    validate = pandas dataframe with 20% of original dataframe
+    test = pandas dataframe with 10% of original dataframe
     '''
-    train_val, test = train_test_split(df, train_size=0.8, random_state=1349)
-    train, validate = train_test_split(train_val, train_size=0.7, random_state=1349)
-    print(f"train.shape:{train.shape}\nvalidate.shape:{validate.shape}\ntest.shape:{test.shape}")
+    train_val, test = train_test_split(df, train_size=0.9, random_state=1349, stratify=df[stratify])
+    train, validate = train_test_split(train_val, train_size=0.778, random_state=1349, stratify=train_val[stratify])
     return train, validate, test
 
 
@@ -130,8 +141,20 @@ def split(df):
 
 def scale(train, validate, test, cols, scaler):
     '''
-    Takes in a train, validate, test and returns the dataframes,
-    but scaled using the 'StandardScaler()'
+    Takes in a train, validate, test dataframe and returns the dataframes scaled with the scaler
+    of your choice
+
+    INPUT:
+    train = pandas dataframe that is meant for training your machine learning model
+    validate = pandas dataframe that is meant for validating your machine learning model
+    test = pandas dataframe that is meant for testing your machine learning model
+    cols = List of column names that you want to be scaled
+    scaler = Scaler that you want to scale columns with like 'MinMaxScaler()', 'StandardScaler()', etc.
+
+    OUTPUT:
+    new_train = pandas dataframe of scaled version of inputted train dataframe
+    new_validate = pandas dataframe of scaled version of inputted validate dataframe
+    new_test = pandas dataframe of scaled version of inputted test dataframe
     '''
     original_train = train.copy()
     original_validate = validate.copy()
@@ -187,8 +210,16 @@ def sample_dataframe(train, validate, test):
 
 def remove_outliers(df, col_list, k=1.5):
     '''
-    remove outliers from a dataframe based on a list of columns using the tukey method
-    returns a single dataframe with outliers removed
+    Remove outliers from a dataframe based on a list of columns using the tukey method and then
+    returns a single dataframe with the outliers removed
+
+    INPUT:
+    df = pandas dataframe
+    col_list = List of columns that you want outliers removed
+    k = Defines range for fences, default/normal is 1.5, 3 is more extreme outliers
+
+    OUTPUT:
+    df = pandas dataframe with outliers removed
     '''
     col_qs = {}
     for col in col_list:
@@ -202,4 +233,59 @@ def remove_outliers(df, col_list, k=1.5):
 
 # =======================================================================================================
 # remove_outliers END
+# remove_outliers TO drop_nullpct
+# drop_nullpct START
+# =======================================================================================================
+
+def drop_nullpct(df, percent_cutoff):
+    '''
+    Takes in a dataframe and a percent_cutoff of nulls to drop a column on
+    and returns the new dataframe and a dictionary of dropped columns and their pct...
+    
+    INPUT:
+    df = pandas dataframe
+    percent_cutoff = Null percent cutoff amount
+    
+    OUTPUT:
+    new_df = pandas dataframe with dropped columns
+    drop_null_pct_dict = dict of column names dropped and pcts
+    '''
+    drop_null_pct_dict = {
+        'column_name' : [],
+        'percent_null' : []
+    }
+    for col in df:
+        pct = df[col].isna().sum() / df.shape[0]
+        if pct > 0.20:
+            df = df.drop(columns=col)
+            drop_null_pct_dict['column_name'].append(col)
+            drop_null_pct_dict['percent_null'].append(pct)
+    new_df = df
+    return new_df, drop_null_pct_dict
+
+# =======================================================================================================
+# drop_nullpct END
+# drop_nullpct TO check_nulls
+# check_nulls START
+# =======================================================================================================
+
+def check_nulls(df):
+    '''
+    Takes a dataframe and returns a list of columns that has at least one null value
+    
+    INPUT:
+    df = pandas dataframe
+    
+    OUTPUT:
+    has_nulls = List of column names with at least one null
+    '''
+    has_nulls = []
+    for col in df:
+        nulls = df[col].isna().sum()
+        if nulls > 0:
+            has_nulls.append(col)
+    return has_nulls
+
+# =======================================================================================================
+# check_nulls END
 # =======================================================================================================
