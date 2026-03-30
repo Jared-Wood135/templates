@@ -1,0 +1,14 @@
+run: findprime_serial findprime_threads
+	time ./findprime_serial
+	time ./findprime_threads
+
+findprime_serial: findprime_serial.cpp
+	g++ findprime_serial.cpp -o findprime_serial
+
+findprime_threads: findprime_threads.cpp
+	g++ findprime_threads.cpp -pthread -o findprime_threads
+
+clean:
+	rm *.o
+	rm findprime_serial
+	rm findprime_threads
