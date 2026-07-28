@@ -1,194 +1,108 @@
-<!-- Title -->
-<div style='background-color: green'>
-<head>
-    <h1 align='center'><b><u><i>
-        Templates - README
-    </i></u></b></h1>
-</head></div>
+# Some-Name-Here
+
+INTENT
+
+WHAT THE PROJECT DOES
 
 
 
 
 
-<!-- Table of Contents -->
-<div style='background-color: orange'>
-<head>
-    <h3 align='center'><b><i>
-        <a id='tableofcontents'></a>
-        Table of Contents:
-    </i></b></h3>
-</head></div>
-<h5>
-<li><a href='#description'>Project Description</a href></li>
-<li><a href='#goals'>Project Goals</a href></li>
-<li><a href='#hypo'>Hypothesis/Questions</a href></li>
-<li><a href='#datadict'>Data Dictionary</a href></li>
-<li><a href='#planning'>Planning</a href></li>
-<li><a href='#instructions'>Instruction To Replicate</a href></li>
-<li><a href='#takeaways'>Takeaways</a href></li>
-</h5>
-<br><br><br>
+## Table of Contents
 
-
-
-
-<!-- Project Description -->
-<div style='background-color: orange'>
-<head>
-    <h3 align='center'><b><i>
-        <a id='description'></a>Project Description:
-    </i></b></h3>
-</head></div>
-<a href='#tableofcontents'>Back to 'Table of Contents'</a>
-<br><br>
-<h5>
-Purely just templates to speed things along...
-</h5>
-<br><br><br>
+- [Acknowledgements](#acknowledgements)
+- [Environment Setup](#environment-setup)
+- [General Project Process](#general-project-process)
+- [Objectives](#objectives)
+- [Known Issues](#known-issues)
 
 
 
 
 
-<!-- Project Goals -->
-<div style='background-color: orange'>
-<head>
-    <h3 align='center'><b><i>
-        <a id='goals'></a>Project Goals:
-    </i></b></h3>
-</head></div>
-<a href='#tableofcontents'>Back to 'Table of Contents'</a>
-<br><br>
-<h5>
-<li>VIVA LA KISS METHOD!!!</li>
-<li>Keep</li>
-<li>It</li>
-<li>Simple</li>
-<li>Stupid</li>
-</h5>
-<br><br><br>
+## Acknowledgements
+
+[Back to Table of Contents](#table-of-contents)
+
+- **DATASET:** [DEEPSIG RADIOML 2018.01A](https://www.deepsig.ai/datasets/)
+    - **LICENSE:** [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+    - **CHANGES MADE:**
+        - Dataset reduced down to only SNR 30 for baseline establishment
+        - This reduced dataset was then used to feature engineer a multitude of seemingly typical information of a signals intelligence anaylsts' pipeline
 
 
 
 
 
-<!-- Hypothesis/Questions -->
-<div style='background-color: orange'>
-<head>
-    <h3 align='center'><b><i>
-        <a id='hypo'></a>Hypothesis/Questions:
-    </i></b></h3>
-</head></div>
-<a href='#tableofcontents'>Back to 'Table of Contents'</a>
-<br><br>
-<h4><b>
-Hypothesis:
-</b></h4>
-<h5>
-Given that these are templates, life will be easier now :D
-</h5>
-<br>
-<h4><b>
-Questions:
-</b></h4>
-<h5>
-<li>Why didn't I do this earlier?</li>
-<li>Because ain't nobody got time for that.</li>
-<li>Until now of course :D</li>
-</h5>
-<br><br><br>
+## Environment Setup
+
+[Back to Table of Contents](#table-of-contents)
+
+Python version in both environments: `VERSION HERE`
+
+You have two options for setting up your Python environment:
+
+### Option 1: Conda (Recommended)
+
+**Conda** is an open-source environment and package manager that makes it easy to manage Python versions and dependencies. If you do not already use an environment manager, you may want to familiarize yourself with one since it helps avoid conflicts and makes reproducibility easier.  I use Conda and I think it's the easiest (Though I haven't used other packages)
+
+**Steps:**
+1. Install [Anaconda](https://www.anaconda.com/products/distribution) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html).
+2. Clone this repository (Or just download ```environment.yml```).
+3. Create the environment using the provided `environment.yml`:
+	```bash
+	conda env create -f environment.yml
+	conda activate RF_HACKING_AI
+	```
+
+### Option 2: pip (Use with Caution)
+
+You can also use `pip` with the `environment.txt` file. Using pip does not manage Python versions, so you must ensure your Python version matches the requirements.
+
+**Steps:**
+1. Ensure you are using a compatible Python version (see above).
+2. Clone this repository (Or just download environment.txt).
+3. Install dependencies:
+	```bash
+	pip install -r environment.txt
+    ```
 
 
 
 
 
+## General Project Process
 
-<!-- Data Dictionary -->
-<div style='background-color: orange'>
-<head>
-    <h3 align='center'><b><i>
-        <a id='datadict'></a>Data Dictionary:
-    </i></b></h3>
-</head></div>
-<a href='#tableofcontents'>Back to 'Table of Contents'</a>
-<br><br>
+[Back to Table of Contents](#table-of-contents)
 
-| Feature Name | Data Type | Description | Example |
-| ----- | ----- | ----- | ----- |
-| holy_shit | bool | Whether or not a shit is holy | True |
-
-<br><br><br>
+STUFF
 
 
 
 
 
+## Objectives
 
-<!-- Planning -->
-<div style='background-color: orange'>
-<head>
-    <h3 align='center'><b><i>
-        <a id='planning'></a>Planning:
-    </i></b></h3>
-</head></div>
-<a href='#tableofcontents'>Back to 'Table of Contents'</a>
-<br><br>
-<h4><b>Objective</b></h4>
-<li>Make a repository of templates for ease of use</li>
-<br>
-<h4><b>Methodology</b></h4>
-<li>Data science pipeline</li>
-<li>Explore for key features and relationships</li>
-<li>Create clusters if and when necessary</li>
-<li>Create models to best predict quality</li>
-<li>Deliver takeaways</li>
-<br>
-<h4><b>Deliverables</b></h4>
-<li>final_report.ipynb</li>
-<li>Slide show (5 minute presentation)</li>
-<br><br><br>
+[Back to Table of Contents](#table-of-contents)
+
+- [ ] Acquire Dataset
+- [ ] Prepare Dataset
+- [ ] Explore Dataset
+- [ ] Feature Engineering
+- [ ] Select Models
+- [ ] Establish Baseline Models
+- [ ] Optimize Baseline Models
+- [ ] Establish "Better" Models
+- [ ] Optimize "Better" Models
+- [ ] Presentation and Report Creation
+- [ ] Future Implementations
 
 
 
 
 
+## Known Issues
 
-<!-- Instructions To Replicate -->
-<div style='background-color: orange'>
-<head>
-    <h3 align='center'><b><i>
-        <a id='instructions'></a>Instructions To Replicate:
-    </i></b></h3>
-</head></div>
-<a href='#tableofcontents'>Back to 'Table of Contents'</a>
-<br><br>
+[Back to Table of Contents](#table-of-contents)
 
-1. Clone this repo
-2. Run desired files/operations
-<br><br><br>
-
-
-
-
-
-<!-- Takeaways -->
-<div style='background-color: orange'>
-<head>
-    <h3 align='center'><b><i>
-        <a id='takeaways'></a>Takeaways:
-    </i></b></h3>
-</head></div>
-<a href='#tableofcontents'>Back to 'Table of Contents'</a>
-<br><br>
-<h4><b>Summary:</b></h4>
-
-- Templates are life!
-<br><br>
-<h4><b>Recommendations:</b></h4>
-
-- Templates are life!
-<br><br>
-<h4><b>Next Steps:</b></h4>
-
-- THERE ARE MANY TEMPLATES, BUT THIS ONE IS MINE!
-<br><br>
+- `environment.yml` and `requirements.txt` is not created yet
