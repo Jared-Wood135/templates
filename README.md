@@ -105,4 +105,4 @@ STUFF
 
 [Back to Table of Contents](#table-of-contents)
 
-- `environment.yml` and `requirements.txt` is not created yet
+- `environment.yml` and `environment.txt` is not created yet
