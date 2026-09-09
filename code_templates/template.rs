@@ -12,7 +12,8 @@
 //! - File Overview, Imports, Global Variables
 //! - Helper Functions
 //!     - Thing 1
-//!     - Thing 2
+//! - Test Functions
+//!     - test_thing1_ones
 //! - Main Function
 
 // ----- Imports ----------------------------------------------------------------------------------
@@ -21,10 +22,10 @@
 // ----- Global Variables -------------------------------------------------------------------------
 
 
-// ===============================================================================================
+// ================================================================================================
 // END File Overview, Imports, Global Variables
 // START Helper Functions
-// ===============================================================================================
+// ================================================================================================
 
 /// About
 /// -----
@@ -32,38 +33,49 @@
 ///
 /// Parameters
 /// ----------
-/// - ray_nn_train_func (Function) :
-///     - The Ray-Train function logic for MLflow to wrap and log information from
+/// - some_param: u32
+///     - Unsigned variable for blah
 ///
-/// - framework (&str) :
-///     - Default: pytorch (Not implemented)
-///     - String representation of the NN framework used (NOT IMPLEMENTED)
+/// Exceptions
+/// ----------
+/// - NA
 ///
-/// Errors / Panics
-/// ---------------
-/// - Runtime error if anything should fail to log properly
-/// - NotImplementedError equivalent if something has not been implemented yet
-///
-/// Returns
-/// -------
-/// - Wraps the Ray-train function with MLflow logging logic to display results on MLflow UI
-fn thing1() {
+/// Output
+/// ------
+/// - u32
+///     - Unsigned variable for blah
+fn thing1(some_param:u32) -> u32{
     // TODO: Implement
 }
 
-fn thing2() {
-    // TODO: Implement
-}
-
-// ===============================================================================================
+// ================================================================================================
 // END Helper Functions
+// START Test Functions
+// ================================================================================================
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    /// About
+    /// -----
+    /// - Test for thing1
+    #[test]
+    fn test_thing1_ones() {
+        assert_eq!(1, 1);
+    }
+}
+
+// ================================================================================================
+// END Test Functions
 // START Main Function
-// ===============================================================================================
+// ================================================================================================
 
 fn main() {
     // Main function execution logic
+    thing1();
 }
 
-// ===============================================================================================
+// ================================================================================================
 // END Main Function
-// ===============================================================================================
+// ================================================================================================
