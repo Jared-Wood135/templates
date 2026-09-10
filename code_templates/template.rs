@@ -36,8 +36,8 @@
 /// - some_param: u32
 ///     - Unsigned variable for blah
 ///
-/// Exceptions
-/// ----------
+/// Panics
+/// ------
 /// - NA
 ///
 /// Output
