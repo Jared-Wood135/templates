@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  30 MAR 2026 13:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  28 SEP 2026 16:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -623,7 +623,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [8]
-runsystem(latexminted cleantemp  --timestamp 20260330133100 4358B5009C67D0E31D7FBF1663FCD3BF)...executed safely (allowed).
+runsystem(latexminted cleantemp  --timestamp 20260928160558 4358B5009C67D0E31D7FBF1663FCD3BF)...executed safely (allowed).
 
  (./notes.aux)
  ***********
@@ -642,7 +642,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  85i,11n,93p,567b,482s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on notes.pdf (8 pages, 52480 bytes).
+Output written on notes.pdf (8 pages, 52479 bytes).
 PDF statistics:
  185 PDF objects out of 1000 (max. 8388607)
  165 compressed objects within 2 object streams

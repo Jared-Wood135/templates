@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1774899060.5093 "/Users/manupfool/Desktop/personalProjects/templates/textual_templates/notes_template/notes.tex" "notes.pdf" "notes" 1774899062.87037 0
-  "/Users/manupfool/Desktop/personalProjects/templates/textual_templates/notes_template/notes.tex" 1774899060.20065 5075 24c24bf25955ecf8885500d75e59141a ""
+["pdflatex"] 1790633158.65165 "/Users/manupfool/Desktop/personalProjects/templates/textual_templates/notes_template/notes.tex" "notes.pdf" "notes" 1790633161.78556 0
+  "/Users/manupfool/Desktop/personalProjects/templates/textual_templates/notes_template/notes.tex" 1790633158.20744 5859 916a416a3627a292eda1b4f7ba40aa6e ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -119,10 +119,10 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1758413846 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1741450574 3345740 46b66fdb0378f7bf5921b5eabf1762b8 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "notes.aux" 1774899062.73858 2264 d2a24dbb25c99f543ab2d0cf424c3e8e "pdflatex"
-  "notes.out" 1774899062.73984 2139 14c5ceb4a7c6ca35186a76f062a45d52 "pdflatex"
-  "notes.tex" 1774899060.20065 5075 24c24bf25955ecf8885500d75e59141a ""
-  "notes.toc" 1774899062.74035 1174 4fe052ba60adca599bd987bc96006f53 "pdflatex"
+  "notes.aux" 1790633161.61631 2264 d2a24dbb25c99f543ab2d0cf424c3e8e "pdflatex"
+  "notes.out" 1790633161.61762 2139 14c5ceb4a7c6ca35186a76f062a45d52 "pdflatex"
+  "notes.tex" 1790633158.20744 5859 916a416a3627a292eda1b4f7ba40aa6e ""
+  "notes.toc" 1790633161.61811 1174 4fe052ba60adca599bd987bc96006f53 "pdflatex"
   (generated)
   "notes.aux"
   "notes.log"
